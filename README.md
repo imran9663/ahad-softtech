@@ -1,15 +1,24 @@
-# AHAD Softtech Corporate Website
+# AHAD Softtech Corporate Website + CMS
 
-Premium, conversion-oriented B2B corporate website and Strapi CMS architecture based on the approved project requirements.
+Strapi 5 + PostgreSQL CMS foundation and frontend workspace for the AHAD Softtech corporate website.
 
-## Stack
-- Frontend: HTML + Tailwind CSS + JavaScript
-- CMS/API: Strapi 5
-- Database: PostgreSQL
-- API: REST
+## Completed
 
-## Structure
-- `frontend/` — public website
-- `cms/` — Strapi CMS/API
-- `docs/` — architecture and implementation documentation
-- `scripts/` — development/deployment utilities
+- Phase 1.1 — Foundation & Architecture
+- Phase 1.2 — Database & Strapi Bootstrap
+- Phase 1.3 — Strapi Admin, Roles & Permissions foundation
+- Phase 1.4 — Database & CMS Content Model Foundation
+- Phase 1.5 — Remaining CMS Content Models
+
+## Current CMS domains
+
+- Site settings, navigation and pages
+- Services
+- Case studies, testimonials and client logos
+- FAQs
+- Blog, authors, categories and tags
+- Careers, job openings and applications
+- Website leads
+- Redirects
+
+See `docs/PHASE-1.5-CMS-CONTENT-MODELS.md` for the model and security decisions.

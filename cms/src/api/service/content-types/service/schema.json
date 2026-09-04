@@ -59,6 +59,12 @@
     "sortOrder": {
       "type": "integer",
       "default": 0
+    },
+    "caseStudies": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::case-study.case-study",
+      "mappedBy": "services"
     }
   }
 }

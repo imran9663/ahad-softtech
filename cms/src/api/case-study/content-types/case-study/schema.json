@@ -1,0 +1,109 @@
+{
+  "kind": "collectionType",
+  "collectionName": "case_studies",
+  "info": {
+    "singularName": "case-study",
+    "pluralName": "case_studies",
+    "displayName": "Case Study"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "clientDisplayName": {
+      "type": "string"
+    },
+    "clientVisibility": {
+      "type": "enumeration",
+      "enum": [
+        "public_name",
+        "anonymized",
+        "confidential"
+      ],
+      "default": "public_name",
+      "required": true
+    },
+    "clientLogo": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::client-logo.client-logo"
+    },
+    "summary": {
+      "type": "text",
+      "required": true
+    },
+    "challenge": {
+      "type": "richtext"
+    },
+    "solution": {
+      "type": "richtext"
+    },
+    "implementation": {
+      "type": "richtext"
+    },
+    "results": {
+      "type": "richtext"
+    },
+    "metrics": {
+      "type": "component",
+      "component": "case-study.metric",
+      "repeatable": true
+    },
+    "technologies": {
+      "type": "component",
+      "component": "case-study.technology",
+      "repeatable": true
+    },
+    "services": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::service.service",
+      "inversedBy": "caseStudies"
+    },
+    "featuredImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "testimonial": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::testimonial.testimonial"
+    },
+    "publishedDate": {
+      "type": "datetime"
+    },
+    "seo": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "displayOrder": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

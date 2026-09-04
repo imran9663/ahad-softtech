@@ -1,1 +1,2 @@
-# redirect content type
+# Redirect
+Website redirect mapping managed by authorized administrators.

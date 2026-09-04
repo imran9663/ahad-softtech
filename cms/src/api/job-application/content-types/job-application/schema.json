@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "job_applications",
+  "info": {
+    "singularName": "job-application",
+    "pluralName": "job_applications",
+    "displayName": "Job Application"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "location": {
+      "type": "string"
+    },
+    "coverLetter": {
+      "type": "text"
+    },
+    "resume": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "linkedinUrl": {
+      "type": "string"
+    },
+    "portfolioUrl": {
+      "type": "string"
+    },
+    "jobOpening": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::job-opening.job-opening",
+      "inversedBy": "applications"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "new",
+        "screening",
+        "shortlisted",
+        "interview",
+        "offer",
+        "hired",
+        "rejected",
+        "withdrawn"
+      ],
+      "default": "new"
+    },
+    "internalNotes": {
+      "type": "text"
+    },
+    "consentToProcess": {
+      "type": "boolean",
+      "required": true
+    },
+    "source": {
+      "type": "string"
+    }
+  }
+}

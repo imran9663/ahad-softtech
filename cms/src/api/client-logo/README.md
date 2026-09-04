@@ -1,1 +1,2 @@
-# client-logo content type
+# Client Logo
+Approved client identity/logo records for trusted brand displays.

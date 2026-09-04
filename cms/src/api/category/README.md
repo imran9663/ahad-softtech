@@ -1,1 +1,2 @@
-# category content type
+# Category
+Blog category taxonomy with SEO metadata.

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_career_social_links",
+  "info": {
+    "displayName": "Social Link"
+  },
+  "options": {},
+  "attributes": {
+    "platform": {
+      "type": "enumeration",
+      "enum": [
+        "linkedin",
+        "x",
+        "facebook",
+        "instagram",
+        "youtube",
+        "other"
+      ],
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_lead_lead_notes",
+  "info": {
+    "displayName": "Lead Note"
+  },
+  "options": {},
+  "attributes": {
+    "note": {
+      "type": "text",
+      "required": true
+    },
+    "createdBy": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "datetime"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_case_study_metrics",
+  "info": {
+    "displayName": "Case Study Metric"
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string",
+      "required": true
+    },
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "supportingText": {
+      "type": "text"
+    }
+  }
+}

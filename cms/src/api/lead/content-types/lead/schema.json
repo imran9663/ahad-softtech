@@ -1,0 +1,89 @@
+{
+  "kind": "collectionType",
+  "collectionName": "leads",
+  "info": {
+    "singularName": "lead",
+    "pluralName": "leads",
+    "displayName": "Lead"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "leadType": {
+      "type": "enumeration",
+      "enum": [
+        "contact",
+        "request_quote"
+      ],
+      "required": true
+    },
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    },
+    "jobTitle": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "phone": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "serviceInterest": {
+      "type": "string"
+    },
+    "budgetRange": {
+      "type": "string"
+    },
+    "message": {
+      "type": "text"
+    },
+    "source": {
+      "type": "string"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "new",
+        "contacted",
+        "qualified",
+        "proposal",
+        "won",
+        "lost",
+        "spam"
+      ],
+      "default": "new"
+    },
+    "assignedTo": {
+      "type": "string"
+    },
+    "followUpAt": {
+      "type": "datetime"
+    },
+    "notes": {
+      "type": "component",
+      "component": "lead.lead-note",
+      "repeatable": true
+    },
+    "consentToContact": {
+      "type": "boolean",
+      "default": false
+    },
+    "ipHash": {
+      "type": "string"
+    }
+  }
+}
