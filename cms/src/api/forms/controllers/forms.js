@@ -1,4 +1,5 @@
 const MAX_RESUME_BYTES = 5 * 1024 * 1024;
+const { sendEmail } = require('../../../services/notifications');
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function body(ctx) {
@@ -42,6 +43,14 @@ async function createLead(ctx, leadType) {
   if (!data.consentToContact) ctx.throw(400, 'Consent to contact is required');
 
   const lead = await strapi.documents('api::lead.lead').create({ data });
+  try {
+    await sendEmail({
+      subject: `New AHAD ${leadType.replace('_', ' ')} enquiry`,
+      text: `A new website enquiry was received from ${data.firstName}${data.lastName ? ` ${data.lastName}` : ''}. Email: ${data.email}. Company: ${data.company || 'Not provided'}.`
+    });
+  } catch (error) {
+    strapi.log.error(`Lead notification failed: ${error.message}`);
+  }
   return { data: { id: lead.documentId || lead.id, message: 'Thanks. Your enquiry has been received.' } };
 }
 
@@ -105,6 +114,14 @@ module.exports = ({ strapi }) => ({
     };
 
     const application = await strapi.documents('api::job-application.job-application').create({ data });
+    try {
+      await sendEmail({
+        subject: `New career application from ${firstName} ${lastName}`,
+        text: `A new career application was received from ${firstName} ${lastName}. Email: ${email}.`
+      });
+    } catch (error) {
+      strapi.log.error(`Application notification failed: ${error.message}`);
+    }
     ctx.body = { data: { id: application.documentId || application.id, message: 'Your application has been submitted.' } };
   }
 });

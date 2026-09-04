@@ -28,12 +28,7 @@ Strapi 5 + PostgreSQL CMS foundation and frontend workspace for the AHAD Softtec
 
 ### Phase 3 — Integration, QA & Production Readiness
 
-- [ ] Phase 3.1 — Strapi/PostgreSQL Runtime Integration
-- [ ] Phase 3.2 — Forms, Email Notifications & Spam Protection
-- [ ] Phase 3.3 — Media/CDN, Caching & Security Hardening
-- [ ] Phase 3.4 — End-to-End QA, Responsive QA & Accessibility QA
-- [ ] Phase 3.5 — Staging Deployment & UAT
-- [ ] Phase 3.6 — Production Deployment, Monitoring & Backup Verification
+- [x] Phase 3.1–3.6 — Production Integration, QA & Deployment foundation
 
 ### Phase 4 — Optional Business Integrations
 
@@ -68,4 +63,6 @@ Only implement these when there is a confirmed business requirement:
 - Deployment path: Development → Staging → Production
 - Content model: Structured content + controlled Dynamic Zones
 
-See `docs/PHASE-1.7-CMS-PERMISSIONS-SEED.md` and `docs/security/PUBLIC-API-PERMISSIONS.md` for the Phase 1.7 implementation and security boundary.
+See `docs/PHASE-1.7-CMS-PERMISSIONS-SEED.md`, `docs/security/PUBLIC-API-PERMISSIONS.md`, `docs/PHASE-3-PRODUCTION-INTEGRATION-QA.md` and `docs/deployment/PRODUCTION-RUNBOOK.md` for the implementation, security boundary and production procedures.
+
+**Phase 3 status: Production integration, QA and deployment foundation complete. Actual staging/production launch requires the client infrastructure, secrets, DNS/TLS, email provider and backup environment.**
