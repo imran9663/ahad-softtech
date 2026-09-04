@@ -1,0 +1,4 @@
+{
+ "kind":"collectionType","collectionName":"pages","info":{"singularName":"page","pluralName":"pages","displayName":"Page"},"options":{"draftAndPublish":true},
+ "attributes":{"title":{"type":"string","required":true},"slug":{"type":"uid","targetField":"title","required":true},"shortDescription":{"type":"text"},"hero":{"type":"component","component":"sections.hero"},"sections":{"type":"dynamiczone","components":["sections.rich-text","sections.feature-split","sections.service-grid","sections.statistics","sections.process-steps","sections.faq-block","sections.cta-block"]},"seo":{"type":"component","component":"seo.seo","required":true}}
+}

@@ -1,0 +1,1 @@
+{"collectionName":"components_sections_service_grids","info":{"displayName":"Service Grid"},"options":{},"attributes":{"heading":{"type":"string"},"description":{"type":"text"},"services":{"type":"json"},"displayVariant":{"type":"enumeration","enum":["cards","compact"],"default":"cards"}}}

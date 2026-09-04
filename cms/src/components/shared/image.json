@@ -1,0 +1,1 @@
+{"collectionName":"components_shared_images","info":{"displayName":"Image"},"options":{},"attributes":{"image":{"type":"media","multiple":false,"allowedTypes":["images"],"required":true},"altText":{"type":"string","required":true},"caption":{"type":"string"},"credit":{"type":"string"}}}

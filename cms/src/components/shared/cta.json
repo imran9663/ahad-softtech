@@ -1,0 +1,1 @@
+{"collectionName":"components_shared_ctas","info":{"displayName":"CTA"},"options":{},"attributes":{"label":{"type":"string","required":true},"url":{"type":"string","required":true},"openInNewTab":{"type":"boolean","default":false},"variant":{"type":"enumeration","enum":["primary","secondary","text"],"default":"primary"}}}

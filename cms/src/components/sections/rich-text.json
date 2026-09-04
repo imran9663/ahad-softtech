@@ -1,0 +1,1 @@
+{"collectionName":"components_sections_rich_texts","info":{"displayName":"Rich Text"},"options":{},"attributes":{"heading":{"type":"string"},"content":{"type":"richtext","required":true}}}
