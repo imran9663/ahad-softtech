@@ -18,14 +18,16 @@ Strapi 5 + PostgreSQL CMS foundation and frontend workspace for the AHAD Softtec
 
 ### Phase 2 — Corporate Website UI/UX & Frontend Implementation
 
-- [ ] Phase 2.1 — Design System, Brand Tokens & Responsive Layout Foundation
-- [ ] Phase 2.2 — Global Header, Navigation, Footer & Shared UI
-- [ ] Phase 2.3 — Homepage & Conversion Sections
-- [ ] Phase 2.4 — About, Services Index & Service Detail Pages
+- [x] Phase 2.1 — Design System, Brand Tokens & Responsive Layout Foundation
+- [x] Phase 2.2 — Global Header, Navigation, Footer & Shared UI
+- [x] Phase 2.3 — Homepage & Conversion Sections
+- [x] Phase 2.4 — About, Services Index & Service Detail Pages
 - [ ] Phase 2.5 — Case Studies, Testimonials, Client Logos & FAQs
 - [ ] Phase 2.6 — Careers, Blog, Contact & Request Quote
 - [ ] Phase 2.7 — CMS Dynamic-Zone Rendering & Content States
 - [ ] Phase 2.8 — Accessibility, SEO, Analytics & Performance Hardening
+
+**Phase 2.1–2.4 status: Core website implementation complete.**
 
 ### Phase 3 — Integration, QA & Production Readiness
 

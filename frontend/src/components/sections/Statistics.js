@@ -1,1 +1,1 @@
-// Statistics component
+export function renderProofStrip() { return `<section class="proof-strip"><div class="container proof-grid"><div><strong>Global</strong><span>International prospect focus</span></div><div><strong>BPO</strong><span>Customer operations capability</span></div><div><strong>Tech</strong><span>Technology-enabled delivery</span></div><div><strong>Human</strong><span>People-first service delivery</span></div></div></section>`; }

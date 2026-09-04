@@ -1,1 +1,11 @@
-// Footer component
+export function renderFooter() {
+  return `<footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand"><a class="brand brand-light" href="/"><span class="brand-mark">A</span><span>AHAD<span class="brand-soft">Softtech</span></span></a><p>Global BPO and technology solutions for businesses that need dependable, scalable operations.</p></div>
+      <div><h2>Explore</h2><a href="/about">About</a><a href="/services">Services</a><a href="/case-studies">Case Studies</a><a href="/blog">Insights</a></div>
+      <div><h2>Work with us</h2><a href="/request-quote">Request a Quote</a><a href="/contact">Contact</a><a href="/careers">Careers</a></div>
+      <div><h2>Capabilities</h2><a href="/services/bpo-services">BPO Services</a><a href="/services/customer-support">Customer Support</a><a href="/services/technical-support">Technical Support</a><a href="/services/software-development">Software Development</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© ${new Date().getFullYear()} AHAD Softtech. All rights reserved.</span><span>India-based delivery. Built for global businesses.</span></div>
+  </footer>`;
+}
