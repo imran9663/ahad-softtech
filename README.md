@@ -2,13 +2,52 @@
 
 Strapi 5 + PostgreSQL CMS foundation and frontend workspace for the AHAD Softtech corporate website.
 
-## Completed
+## Project Progress
 
-- Phase 1.1 — Foundation & Architecture
-- Phase 1.2 — Database & Strapi Bootstrap
-- Phase 1.3 — Strapi Admin, Roles & Permissions foundation
-- Phase 1.4 — Database & CMS Content Model Foundation
-- Phase 1.5 — Remaining CMS Content Models
+### Phase 1 — CMS & Platform Foundation
+
+- [x] Phase 1.1 — Foundation & Architecture
+- [x] Phase 1.2 — Database & Strapi Bootstrap
+- [x] Phase 1.3 — Strapi Admin, Roles & Permissions foundation
+- [x] Phase 1.4 — Database & CMS Content Model Foundation
+- [x] Phase 1.5 — Remaining CMS Content Models
+- [x] Phase 1.6 — CMS API Integration & Frontend Consumption
+- [x] Phase 1.7 — Public API Permissions & CMS Seed Data
+
+**Phase 1 status: Foundation complete.**
+
+### Phase 2 — Corporate Website UI/UX & Frontend Implementation
+
+- [ ] Phase 2.1 — Design System, Brand Tokens & Responsive Layout Foundation
+- [ ] Phase 2.2 — Global Header, Navigation, Footer & Shared UI
+- [ ] Phase 2.3 — Homepage & Conversion Sections
+- [ ] Phase 2.4 — About, Services Index & Service Detail Pages
+- [ ] Phase 2.5 — Case Studies, Testimonials, Client Logos & FAQs
+- [ ] Phase 2.6 — Careers, Blog, Contact & Request Quote
+- [ ] Phase 2.7 — CMS Dynamic-Zone Rendering & Content States
+- [ ] Phase 2.8 — Accessibility, SEO, Analytics & Performance Hardening
+
+### Phase 3 — Integration, QA & Production Readiness
+
+- [ ] Phase 3.1 — Strapi/PostgreSQL Runtime Integration
+- [ ] Phase 3.2 — Forms, Email Notifications & Spam Protection
+- [ ] Phase 3.3 — Media/CDN, Caching & Security Hardening
+- [ ] Phase 3.4 — End-to-End QA, Responsive QA & Accessibility QA
+- [ ] Phase 3.5 — Staging Deployment & UAT
+- [ ] Phase 3.6 — Production Deployment, Monitoring & Backup Verification
+
+### Phase 4 — Optional Business Integrations
+
+Only implement these when there is a confirmed business requirement:
+
+- [ ] CRM integration
+- [ ] HRMS integration
+- [ ] WhatsApp API
+- [ ] Marketing automation
+- [ ] Advanced lead scoring
+- [ ] Multi-language content
+- [ ] Advanced analytics dashboards
+- [ ] Content approval workflow / scheduled publishing / live preview
 
 ## Current CMS domains
 
@@ -21,4 +60,13 @@ Strapi 5 + PostgreSQL CMS foundation and frontend workspace for the AHAD Softtec
 - Website leads
 - Redirects
 
-See `docs/PHASE-1.5-CMS-CONTENT-MODELS.md` for the model and security decisions.
+## Architecture
+
+- CMS: Strapi 5
+- Database: PostgreSQL
+- Frontend: HTML + Tailwind CSS + JavaScript
+- API: REST
+- Deployment path: Development → Staging → Production
+- Content model: Structured content + controlled Dynamic Zones
+
+See `docs/PHASE-1.7-CMS-PERMISSIONS-SEED.md` and `docs/security/PUBLIC-API-PERMISSIONS.md` for the Phase 1.7 implementation and security boundary.
