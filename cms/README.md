@@ -1,3 +1,5 @@
-# CMS
+# AHAD Softtech CMS
 
-Strapi 5 implementation. PostgreSQL is the persistence layer. Public website content is exposed through controlled REST APIs; leads and applications remain protected.
+Strapi 5 CMS/API foundation using PostgreSQL and REST APIs.
+
+Sensitive content such as leads and job applications must remain protected by authenticated permissions and controlled endpoints.

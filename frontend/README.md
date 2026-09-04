@@ -1,3 +1,7 @@
-# Frontend
+# AHAD Softtech Frontend
 
-Public AHAD Softtech website. Keep presentation concerns here and consume published CMS content through REST APIs.
+Public corporate website foundation.
+
+Planned stack: HTML + Tailwind CSS + JavaScript.
+
+CMS endpoint is configured through `PUBLIC_CMS_URL`.
