@@ -5,14 +5,14 @@ function body(ctx) {
   return ctx.request.body || {};
 }
 
-function assertString(value, field, max = 500) {
+function assertString(ctx, value, field, max = 500) {
   if (typeof value !== 'string' || !value.trim()) ctx.throw(400, `${field} is required`);
   if (value.length > max) ctx.throw(400, `${field} is too long`);
   return value.trim();
 }
 
-function assertEmail(value) {
-  const email = assertString(value, 'email', 254);
+function assertEmail(ctx, value) {
+  const email = assertString(ctx, value, 'email', 254);
   if (!EMAIL_RE.test(email)) ctx.throw(400, 'A valid email is required');
   return email;
 }
@@ -26,11 +26,11 @@ async function createLead(ctx, leadType) {
   const input = body(ctx);
   const data = {
     leadType,
-    firstName: assertString(input.firstName, 'firstName', 100),
+    firstName: assertString(ctx, input.firstName, 'firstName', 100),
     lastName: input.lastName ? String(input.lastName).trim().slice(0, 100) : undefined,
     company: input.company ? String(input.company).trim().slice(0, 200) : undefined,
     jobTitle: input.jobTitle ? String(input.jobTitle).trim().slice(0, 150) : undefined,
-    email: assertEmail(input.email),
+    email: assertEmail(ctx, input.email),
     phone: input.phone ? String(input.phone).trim().slice(0, 50) : undefined,
     country: input.country ? String(input.country).trim().slice(0, 100) : undefined,
     serviceInterest: input.serviceInterest ? String(input.serviceInterest).trim().slice(0, 150) : undefined,
@@ -64,10 +64,10 @@ module.exports = ({ strapi }) => ({
     const allowed = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
     if (resume.type && !allowed.includes(resume.type)) ctx.throw(400, 'Resume must be PDF or Word document');
 
-    const firstName = assertString(input.firstName, 'firstName', 100);
-    const lastName = assertString(input.lastName, 'lastName', 100);
-    const email = assertEmail(input.email);
-    const phone = assertString(input.phone, 'phone', 50);
+    const firstName = assertString(ctx, input.firstName, 'firstName', 100);
+    const lastName = assertString(ctx, input.lastName, 'lastName', 100);
+    const email = assertEmail(ctx, input.email);
+    const phone = assertString(ctx, input.phone, 'phone', 50);
     const consentToProcess = input.consentToProcess === true || input.consentToProcess === 'true';
     if (!consentToProcess) ctx.throw(400, 'Consent to process application data is required');
 

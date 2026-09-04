@@ -1,18 +1,23 @@
 import { mediaUrl } from '../services/cmsApi.js';
+import { esc } from './content.js';
+import { renderHero } from '../components/sections/Hero.js';
+import { renderServiceGrid } from '../components/sections/ServiceGrid.js';
+import { renderCTA } from '../components/sections/CTA.js';
+import { renderProofStrip } from '../components/sections/Statistics.js';
+import { renderFAQ } from '../components/sections/FAQ.js';
+import { renderProcess } from '../components/sections/ProcessSteps.js';
+import { renderWhy } from '../components/sections/FeatureSplit.js';
 
-const esc = (value = '') => String(value).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-
-export function renderPageSections(sections = []) {
-  return sections.map(section => {
-    const type = section.__component || '';
-    if (type === 'sections.hero') {
-      return `<section class="hero"><div><p>${esc(section.eyebrow || '')}</p><h1>${esc(section.title || '')}</h1><p>${esc(section.description || '')}</p></div>${section.image ? `<img src="${esc(mediaUrl(section.image))}" alt="${esc(section.image.alternativeText || '')}">` : ''}</section>`;
-    }
-    if (type === 'sections.rich-text') return `<section class="rich-text"><div>${section.content || ''}</div></section>`;
-    if (type === 'sections.feature-split') return `<section class="feature-split"><div><h2>${esc(section.title || '')}</h2><p>${esc(section.description || '')}</p></div></section>`;
-    if (type === 'sections.statistics') return `<section class="statistics">${(section.items || []).map(item => `<article><strong>${esc(item.value)}</strong><span>${esc(item.label)}</span></article>`).join('')}</section>`;
-    if (type === 'sections.process-steps') return `<section class="process">${(section.steps || []).map(step => `<article><strong>${esc(step.step || '')}</strong><h3>${esc(step.title || '')}</h3><p>${esc(step.description || '')}</p></article>`).join('')}</section>`;
-    if (type === 'sections.cta-block') return `<section class="cta"><h2>${esc(section.title || '')}</h2><p>${esc(section.description || '')}</p></section>`;
-    return '';
-  }).join('');
-}
+export function renderPageSections(sections=[]){ return sections.map(section=>{
+ const type=section.__component||'';
+ if(type==='sections.hero') return renderHero(section);
+ if(type==='sections.rich-text') return `<section class="rich-text"><div class="container narrow rich-copy">${section.content||''}</div></section>`;
+ if(type==='sections.feature-split') return renderWhy(section);
+ if(type==='sections.service-grid') return `<section class="services-section"><div class="container"><div class="section-heading"><p class="eyebrow">Services</p><h2>${esc(section.title||'Capabilities')}</h2></div>${renderServiceGrid(section.services||[])}</div></section>`;
+ if(type==='sections.statistics') return renderProofStrip(section.items||[]);
+ if(type==='sections.process-steps') return renderProcess(section.steps||[]);
+ if(type==='sections.faq-block') return renderFAQ(section.items||[]);
+ if(type==='sections.cta-block') return renderCTA(section.title,section.description,section.cta?.url||'/request-quote');
+ if(type==='sections.image') return section.image?`<section class="image-section"><div class="container"><img class="content-image" src="${esc(mediaUrl(section.image))}" alt="${esc(section.image.alternativeText)}" loading="lazy"></div></section>`:'';
+ return '';
+ }).join(''); }

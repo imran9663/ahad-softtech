@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>/</loc></url>
+  <url><loc>/about</loc></url>
+  <url><loc>/services</loc></url>
+  <url><loc>/services/bpo-services</loc></url>
+  <url><loc>/services/customer-support</loc></url>
+  <url><loc>/services/technical-support</loc></url>
+  <url><loc>/services/back-office-operations</loc></url>
+  <url><loc>/services/data-operations</loc></url>
+  <url><loc>/services/software-development</loc></url>
+  <url><loc>/services/digital-solutions</loc></url>
+  <url><loc>/case-studies</loc></url>
+  <url><loc>/blog</loc></url>
+  <url><loc>/careers</loc></url>
+  <url><loc>/contact</loc></url>
+  <url><loc>/request-quote</loc></url>
+</urlset>

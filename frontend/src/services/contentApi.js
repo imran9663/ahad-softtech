@@ -97,3 +97,14 @@ export async function getRedirect(path) {
 }
 
 export { publicPopulate };
+
+export async function getTestimonials(params = {}) {
+  const result = await getCollection('testimonials', { ...params, 'filters[approved][$eq]': true, 'filters[active][$eq]': true, sort: 'displayOrder:asc', populate: '*' });
+  return unwrapList(result);
+}
+export async function getClientLogos(params = {}) {
+  const result = await getCollection('client-logos', { ...params, 'filters[approved][$eq]': true, 'filters[active][$eq]': true, sort: 'displayOrder:asc', populate: '*' });
+  return unwrapList(result);
+}
+export async function getCategories(params = {}) { const result = await getCollection('categories', { ...params, 'filters[active][$eq]': true, sort: 'name:asc', populate: '*' }); return unwrapList(result); }
+export async function getTags(params = {}) { const result = await getCollection('tags', { ...params, 'filters[active][$eq]': true, sort: 'name:asc', populate: '*' }); return unwrapList(result); }
