@@ -1,1 +1,35 @@
-{"collectionName":"components_shared_images","info":{"displayName":"Image"},"options":{},"attributes":{"image":{"type":"media","multiple":false,"allowedTypes":["images"],"required":true},"altText":{"type":"string","required":true},"caption":{"type":"string"},"credit":{"type":"string"}}}
+{
+  "collectionName": "components_shared_images",
+  "info": {
+    "displayName": "Image"
+  },
+  "options": {},
+  "attributes": {
+    "asset": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "alt": {
+      "type": "string",
+      "required": true
+    },
+    "caption": {
+      "type": "string"
+    },
+    "focalPoint": {
+      "type": "enumeration",
+      "enum": [
+        "center",
+        "top",
+        "right",
+        "bottom",
+        "left"
+      ],
+      "default": "center"
+    }
+  }
+}

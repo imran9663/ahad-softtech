@@ -1,1 +1,38 @@
-{"collectionName":"components_sections_heroes","info":{"displayName":"Hero"},"options":{},"attributes":{"eyebrow":{"type":"string"},"heading":{"type":"string","required":true},"description":{"type":"text"},"primaryCta":{"type":"component","component":"shared.cta"},"secondaryCta":{"type":"component","component":"shared.cta"},"media":{"type":"component","component":"shared.image"},"backgroundVariant":{"type":"enumeration","enum":["default","muted","dark"],"default":"default"}}}
+{
+  "collectionName": "components_sections_heroes",
+  "info": {
+    "displayName": "Hero Section"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "headline": {
+      "type": "string",
+      "required": true
+    },
+    "subheadline": {
+      "type": "text"
+    },
+    "primaryCta": {
+      "type": "component",
+      "component": "shared.cta",
+      "repeatable": false
+    },
+    "secondaryCta": {
+      "type": "component",
+      "component": "shared.cta",
+      "repeatable": false
+    },
+    "backgroundImage": {
+      "type": "component",
+      "component": "shared.image",
+      "repeatable": false
+    },
+    "showTrustStrip": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

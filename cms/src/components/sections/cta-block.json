@@ -1,1 +1,29 @@
-{"collectionName":"components_sections_cta_blocks","info":{"displayName":"CTA Block"},"options":{},"attributes":{"heading":{"type":"string","required":true},"description":{"type":"text"},"primaryButton":{"type":"component","component":"shared.cta"},"secondaryButton":{"type":"component","component":"shared.cta"},"backgroundVariant":{"type":"enumeration","enum":["default","muted","dark"],"default":"dark"}}}
+{
+  "collectionName": "components_sections_cta_blocks",
+  "info": {
+    "displayName": "CTA Block"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "primaryCta": {
+      "type": "component",
+      "component": "shared.cta",
+      "repeatable": false
+    },
+    "secondaryCta": {
+      "type": "component",
+      "component": "shared.cta",
+      "repeatable": false
+    }
+  }
+}

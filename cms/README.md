@@ -1,5 +1,5 @@
 # AHAD Softtech CMS
 
-Strapi 5 CMS/API foundation using PostgreSQL and REST APIs.
+Strapi 5 CMS foundation for the AHAD Softtech corporate website.
 
-Sensitive content such as leads and job applications must remain protected by authenticated permissions and controlled endpoints.
+Phase 1.4 establishes the first production-oriented content model layer: Site Settings, Navigation, Pages, reusable SEO/section components, and Services.

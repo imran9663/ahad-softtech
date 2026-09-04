@@ -1,1 +1,17 @@
-{"collectionName":"components_sections_statistics","info":{"displayName":"Statistics"},"options":{},"attributes":{"heading":{"type":"string"},"items":{"type":"json"}}}
+{
+  "collectionName": "components_sections_statistics",
+  "info": {
+    "displayName": "Statistics"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "component": "sections.statistic-item",
+      "repeatable": true
+    }
+  }
+}

@@ -1,1 +1,20 @@
-{"collectionName":"components_sections_process_steps","info":{"displayName":"Process Steps"},"options":{},"attributes":{"heading":{"type":"string"},"steps":{"type":"json"}}}
+{
+  "collectionName": "components_sections_process_steps",
+  "info": {
+    "displayName": "Process Steps"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "steps": {
+      "type": "component",
+      "component": "sections.process-step",
+      "repeatable": true
+    }
+  }
+}
