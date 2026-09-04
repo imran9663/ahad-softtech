@@ -26,7 +26,20 @@ Strapi 5 + PostgreSQL CMS foundation and frontend workspace for the AHAD Softtec
 
 **Phase 2 status: Website implementation, content routes and frontend hardening complete.**
 
-### Phase 3 — Integration, QA & Production Readiness
+#
+## Database / Local Development
+
+The project uses **Supabase PostgreSQL** as the recommended managed database. Docker PostgreSQL is optional and is not required for normal local development. Strapi connects server-side to Supabase; the browser continues to communicate only with the Strapi API.
+
+Local services:
+
+- Frontend: `http://localhost:5173`
+- Strapi: `http://localhost:1337`
+- Database: Supabase PostgreSQL via Session Pooler
+
+See `supabase/README.md` for setup and SSL guidance.
+
+## Phase 3 — Integration, QA & Production Readiness
 
 - [x] Phase 3.1–3.6 — Production Integration, QA & Deployment foundation
 
