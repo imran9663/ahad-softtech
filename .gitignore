@@ -28,3 +28,20 @@ pnpm-debug.log*
 Thumbs.db
 .vscode/
 .idea/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+cms/.env
+frontend/.env
+
+# Dependencies
+node_modules/
+
+# Strapi generated/runtime files
+cms/.cache/
+cms/.tmp/
+cms/build/
+cms/dist/
+cms/public/uploads/

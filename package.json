@@ -1,0 +1,13 @@
+{
+  "name": "ahad-softtech",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": ["frontend", "cms"],
+  "scripts": {
+    "dev:frontend": "npm run dev --workspace @ahad-softtech/frontend",
+    "build:frontend": "npm run build --workspace @ahad-softtech/frontend",
+    "dev:cms": "npm run develop --workspace @ahad-softtech/cms",
+    "build:cms": "npm run build --workspace @ahad-softtech/cms"
+  },
+  "engines": { "node": ">=20.0.0 <=24.x.x", "npm": ">=10" }
+}

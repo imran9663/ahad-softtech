@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: ahad-softtech-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ahad_softtech
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: change-me
+    ports:
+      - "5432:5432"
+    volumes:
+      - ahad_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d ahad_softtech"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  ahad_postgres_data:
