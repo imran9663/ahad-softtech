@@ -30,18 +30,19 @@ Strapi 5 + PostgreSQL CMS foundation and frontend workspace for the AHAD Softtec
 
 - [x] Phase 3.1–3.6 — Production Integration, QA & Deployment foundation
 
-### Phase 4 — Optional Business Integrations
+### Phase 4 — Business Integrations Foundation
 
-Only implement these when there is a confirmed business requirement:
+- [x] Phase 4 — Provider-neutral integration contracts and activation controls
+- [ ] CRM provider selection + live integration
+- [ ] HRMS provider selection + live integration
+- [ ] WhatsApp provider selection + live integration
+- [ ] Marketing automation provider selection + live integration
+- [x] Advanced lead-scoring foundation
+- [x] Multi-language content/routing foundation
+- [x] Advanced analytics event taxonomy foundation
+- [x] Content approval workflow foundation
 
-- [ ] CRM integration
-- [ ] HRMS integration
-- [ ] WhatsApp API
-- [ ] Marketing automation
-- [ ] Advanced lead scoring
-- [ ] Multi-language content
-- [ ] Advanced analytics dashboards
-- [ ] Content approval workflow / scheduled publishing / live preview
+**Phase 4 status: Integration architecture foundation complete. Live third-party integrations require confirmed providers, credentials, data mappings, consent/legal approval and UAT.**
 
 ## Current CMS domains
 
