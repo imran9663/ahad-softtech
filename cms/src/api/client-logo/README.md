@@ -1,0 +1,1 @@
+# client-logo content type
